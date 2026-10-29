@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Aura</string>
+    <string name="nav_dashboard">Rituals</string>
+    <string name="nav_calendar">Calendar</string>
+    <string name="nav_statistics">Insights</string>
+    <string name="nav_journal">Journal</string>
+    <string name="nav_settings">Studio</string>
+    <string name="quick_add_habit">New Ritual</string>
+    <string name="dashboard_today_rituals">Today\'s Rituals</string>
+    <string name="dashboard_weekly_momentum">Weekly Momentum</string>
+    <string name="dashboard_monthly_streak">Monthly Streak</string>
+    <string name="calendar_title">Consistency &amp; History</string>
+    <string name="statistics_title">Behavioral Intelligence</string>
+    <string name="journal_title">Guided Reflections</string>
+    <string name="settings_title">Preferences &amp; Portability</string>
+    <string name="pomodoro_focus_title">Deep Ritual Timer</string>
+    <string name="export_backup_success">Encrypted-ready JSON snapshot exported successfully.</string>
+    <string name="import_backup_success">Ritual history and settings restored from backup.</string>
+</resources>
