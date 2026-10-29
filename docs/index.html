@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aura — Mindful Habit, Ritual & Focus Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAF8F5;
+      --surface: #FFFFFF;
+      --text-primary: #141413;
+      --text-secondary: #5C5B57;
+      --indigo: #312E81;
+      --indigo-light: #EEF2FF;
+      --emerald: #0F766E;
+      --emerald-light: #ECFDF5;
+      --border: #EAE6DF;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text-primary);
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    .container {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 48px 24px 96px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      text-decoration: none;
+    }
+    .brand-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--indigo);
+      box-shadow: 0 0 0 4px var(--indigo-light);
+    }
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+    .hero {
+      text-align: center;
+      padding: 80px 16px 64px;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--indigo-light);
+      color: var(--indigo);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+    .subtitle {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      border-radius: 14px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+    .btn-primary {
+      background: var(--indigo);
+      color: #FFFFFF;
+      box-shadow: 0 10px 24px -6px rgba(49, 46, 129, 0.35);
+    }
+    .btn-secondary {
+      background: var(--surface);
+      color: var(--text-primary);
+      border: 1px solid var(--border);
+    }
+    .btn-emerald {
+      background: var(--emerald);
+      color: #FFFFFF;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px;
+    }
+    .card-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+      display: block;
+    }
+    .card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .card p {
+      color: var(--text-secondary);
+      font-size: 0.94rem;
+    }
+    footer {
+      margin-top: 80px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--text-secondary);
+      font-size: 0.88rem;
+    }
+    footer a {
+      color: var(--indigo);
+      text-decoration: none;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="#" class="brand">
+        <span class="brand-dot"></span>
+        Aura
+      </a>
+      <div class="nav-links">
+        <a href="https://github.com/sunrisezes/Habit-Tracker">GitHub Repo</a>
+        <a href="https://github.com/sunrisezes/Habit-Tracker/releases/latest">Releases</a>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="pill">Android Native · Kotlin · Jetpack Compose</div>
+      <h1>Quiet precision for your daily rituals.</h1>
+      <p class="subtitle">
+        An ultra-clean Android habit tracker featuring kinetic completion rings, an integrated Countdown Timer, Stopwatch &amp; Daily Alarm Studio, 12-week consistency heatmaps, and a local-first JSON vault.
+      </p>
+      <div class="cta-group">
+        <a class="btn btn-primary" href="https://github.com/sunrisezes/Habit-Tracker/releases/latest/download/Aura-Habit-Tracker.apk">
+          ⬇ Download Android APK (v1.0.0)
+        </a>
+        <a class="btn btn-emerald" href="https://ais-pre-snxhnrn2imimepehnru5s2-586190855991.asia-southeast1.run.app" target="_blank" rel="noopener">
+          ▶ Launch Live Web Preview
+        </a>
+        <a class="btn btn-secondary" href="https://github.com/sunrisezes/Habit-Tracker" target="_blank" rel="noopener">
+          View Source on GitHub
+        </a>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <span class="card-tag">01 · Daily Rituals</span>
+        <h3>Tactile Completion Rings</h3>
+        <p>Track single or multi-step daily habits with spring-animated progress rings, swipe-to-complete gestures, and category filters.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">02 · Time Studio</span>
+        <h3>Timer, Stopwatch &amp; Alarms</h3>
+        <p>Built-in Pomodoro countdown timer, centisecond stopwatch with split laps, and daily habit alarms with Tibetan bowl chimes.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">03 · Consistency Matrix</span>
+        <h3>12-Week Heatmap &amp; Calendar</h3>
+        <p>Inspect your 84-day consistency grid, browse monthly completion rings, and audit or toggle any historical date.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">04 · Deep Analytics</span>
+        <h3>Velocity Charts &amp; Milestones</h3>
+        <p>Smooth 7D/30D/90D Bezier completion curves, life-domain breakdowns, peak day insights, and unlockable milestone badges.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">05 · Mindful Journal</span>
+        <h3>Guided Daily Reflections</h3>
+        <p>Log daily mood, 5-point energy levels, and written reflections linked directly to the habits you completed.</p>
+      </div>
+      <div class="card">
+        <span class="card-tag">06 · 100% Local-First</span>
+        <h3>Room SQLite + JSON Vault</h3>
+        <p>Complete offline privacy with zero cloud tracking, plus one-tap portable JSON backup and restore.</p>
+      </div>
+    </section>
+
+    <footer>
+      <span>Built with Kotlin, Jetpack Compose &amp; Room SQLite.</span>
+      <span>Created by <a href="https://github.com/sunrisezes">@sunrisezes</a></span>
+    </footer>
+  </div>
+</body>
+</html>
